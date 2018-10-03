@@ -1,0 +1,193 @@
+[kfon@sol32 ~]$ cd Desktop
+[kfon@sol32 Desktop]$ cd  OS
+[kfon@sol32 OS]$ ls
+5_36  analysis.txt  assignment3  Assignmt3  Assignmt3.c
+[kfon@sol32 OS]$ gcc -o Assignmt3 Assignmt3.c-pthread
+gcc: Assignmt3.c-pthread: No such file or directory
+gcc: no input files
+[kfon@sol32 OS]$ gcv -o 536 536.c-pthread
+bash: gcv: command not found
+[kfon@sol32 OS]$ ls
+5_36  536.c  analysis.txt  assignment3  Assignmt3
+[kfon@sol32 OS]$ gcc -o Linux_Terminal Linux_Terminal.c-pthread
+gcc: 536.c-pthread: No such file or directory
+gcc: no input files
+[kfon@sol32 OS]$ gcc -o Linux_Terminal Linux_Terminal.c -pthread
+536.c:10:21: error: windows.h: No such file or directory
+[kfon@sol32 OS]$ gcc -o Linux_Terminal Linux_Terminal.c -pthread
+/tmp/ccNyy2Ki.o: In function `main':
+536.c:(.text+0x479): undefined reference to `Sleep'
+/tmp/ccNyy2Ki.o: In function `producer':
+536.c:(.text+0x4de): undefined reference to `Sleep'
+/tmp/ccNyy2Ki.o: In function `consumer':
+536.c:(.text+0x5c8): undefined reference to `Sleep'
+collect2: ld returned 1 exit status
+[kfon@sol32 OS]$ gcc -o Linux_Terminal Linux_Terminal.c -pthread
+[kfon@sol32 OS]$ ./Linux_Terminal
+Useage: <sleep time> <producer threads> <consumer threads>
+[kfon@sol32 OS]$ ./Linux_Terminal 20 5 5
+0
+0
+0
+Producer tries to insert 4836 at time Mon Nov 14 13:47:55 2016
+ number of tick : 0) (Thread ID: 139963178010368)
+Producer tries to insert 1291 at time Mon Nov 14 13:47:55 2016
+ number of tick : 0) (Thread ID: 139963167520512)
+Producer produced 4836 at time Mon Nov 14 13:47:55 2016
+ number of tick : 0) (Thread ID: 139963178010368)
+slot 0: 4836
+slot 1: -1
+slot 2: -1
+slot 3: -1
+slot 4: -1
+
+Producer produced 1291 at time Mon Nov 14 13:47:55 2016
+ number of tick : 0) (Thread ID: 139963167520512)
+slot 0: 4836
+slot 1: 1291
+slot 2: -1
+slot 3: -1
+slot 4: -1
+
+Consumer tries to consume at time Mon Nov 14 13:47:55 2016
+ number of Tick: 10000) (Thread ID: 139963031082752)
+Consumer consumed 4836 at time Mon Nov 14 13:47:55 2016
+ number of tick 10000) (Thread ID: 139963031082752)
+slot 0: -1
+slot 1: 1291
+slot 2: -1
+slot 3: -1
+slot 4: -1
+
+Consumer tries to consume at time Mon Nov 14 13:47:56 2016
+ number of Tick: 10000) (Thread ID: 139962917844736)
+Consumer consumed 1291 at time Mon Nov 14 13:47:56 2016
+ number of tick 10000) (Thread ID: 139962917844736)
+slot 0: -1
+slot 1: -1
+slot 2: -1
+slot 3: -1
+slot 4: -1
+
+Producer tries to insert 2938 at time Mon Nov 14 13:47:56 2016
+ number of tick : 10000) (Thread ID: 139963167520512)
+Producer produced 2938 at time Mon Nov 14 13:47:56 2016
+ number of tick : 10000) (Thread ID: 139963167520512)
+slot 0: -1
+slot 1: -1
+slot 2: 2938
+slot 3: -1
+slot 4: -1
+
+Consumer tries to consume at time Mon Nov 14 13:47:56 2016
+ number of Tick: 10000) (Thread ID: 139963052062464)
+Consumer consumed 2938 at time Mon Nov 14 13:47:56 2016
+ number of tick 10000) (Thread ID: 139963052062464)
+slot 0: -1
+slot 1: -1
+slot 2: -1
+slot 3: -1
+slot 4: -1
+
+Producer tries to insert 393 at time Mon Nov 14 13:47:57 2016
+ number of tick : 10000) (Thread ID: 139963188500224)
+Producer produced 393 at time Mon Nov 14 13:47:57 2016
+ number of tick : 10000) (Thread ID: 139963188500224)
+slot 0: -1
+slot 1: -1
+slot 2: -1
+slot 3: 393
+slot 4: -1
+
+Producer tries to insert 3438 at time Mon Nov 14 13:47:57 2016
+ number of tick : 10000) (Thread ID: 139963146540800)
+Producer produced 3438 at time Mon Nov 14 13:47:57 2016
+ number of tick : 10000) (Thread ID: 139963146540800)
+slot 0: -1
+slot 1: -1
+slot 2: -1
+slot 3: 393
+slot 4: 3438
+
+Producer tries to insert 3332 at time Mon Nov 14 13:47:58 2016
+ number of tick : 10000) (Thread ID: 139963178010368)
+Producer produced 3332 at time Mon Nov 14 13:47:58 2016
+ number of tick : 10000) (Thread ID: 139963178010368)
+slot 0: 3332
+slot 1: -1
+slot 2: -1
+slot 3: 393
+slot 4: 3438
+
+Producer tries to insert 768 at time Mon Nov 14 13:47:59 2016
+ number of tick : 10000) (Thread ID: 139963157030656)
+Consumer tries to consume at time Mon Nov 14 13:47:59 2016
+ number of Tick: 10000) (Thread ID: 139963136050944)
+Producer produced 768 at time Mon Nov 14 13:47:59 2016
+ number of tick : 10000) (Thread ID: 139963157030656)
+slot 0: 3332
+slot 1: 768
+slot 2: -1
+slot 3: 393
+slot 4: 3438
+
+Consumer consumed 393 at time Mon Nov 14 13:47:59 2016
+ number of tick 10000) (Thread ID: 139963136050944)
+slot 0: 3332
+slot 1: 768
+slot 2: -1
+slot 3: -1
+slot 4: 3438
+
+Consumer tries to consume at time Mon Nov 14 13:47:59 2016
+ number of Tick: 10000) (Thread ID: 139963041572608)
+Consumer consumed 3438 at time Mon Nov 14 13:47:59 2016
+ number of tick 10000) (Thread ID: 139963041572608)
+slot 0: 3332
+slot 1: 768
+slot 2: -1
+slot 3: -1
+slot 4: -1
+
+Producer tries to insert 3271 at time Mon Nov 14 13:48:00 2016
+ number of tick : 10000) (Thread ID: 139963146540800)
+Producer produced 3271 at time Mon Nov 14 13:48:00 2016
+ number of tick : 10000) (Thread ID: 139963146540800)
+slot 0: 3332
+slot 1: 768
+slot 2: 3271
+slot 3: -1
+slot 4: -1
+
+Producer tries to insert 1320 at time Mon Nov 14 13:48:00 2016
+ number of tick : 10000) (Thread ID: 139963146540800)
+Producer produced 1320 at time Mon Nov 14 13:48:00 2016
+ number of tick : 10000) (Thread ID: 139963146540800)
+slot 0: 3332
+slot 1: 768
+slot 2: 3271
+slot 3: 1320
+slot 4: -1
+
+Producer tries to insert 3748 at time Mon Nov 14 13:48:00 2016
+ number of tick : 10000) (Thread ID: 139963188500224)
+Producer produced 3748 at time Mon Nov 14 13:48:00 2016
+ number of tick : 10000) (Thread ID: 139963188500224)
+slot 0: 3332
+slot 1: 768
+slot 2: 3271
+slot 3: 1320
+slot 4: 3748
+
+Producer tries to insert 4392 at time Mon Nov 14 13:48:00 2016
+ number of tick : 10000) (Thread ID: 139963157030656)
+Producer tries to insert 4420 at time Mon Nov 14 13:48:00 2016
+ number of tick : 10000) (Thread ID: 139963167520512)
+Producer tries to insert 2983 at time Mon Nov 14 13:48:01 2016
+ number of tick : 10000) (Thread ID: 139963178010368)
+Producer tries to insert 4227 at time Mon Nov 14 13:48:03 2016
+ number of tick : 10000) (Thread ID: 139963146540800)
+Producer tries to insert 3644 at time Mon Nov 14 13:48:04 2016
+ number of tick : 10000) (Thread ID: 139963188500224)
+[kfon@sol32 OS]$ exit
+
